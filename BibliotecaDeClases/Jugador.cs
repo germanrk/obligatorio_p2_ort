@@ -1,32 +1,34 @@
-﻿using System;
+﻿`using System;
 namespace BibliotecaDeClases
 {
     public class Jugador
     {
-        private static int UltimoId { get; set; } = 1;
         public int Id { get; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string NumCamiseta { get; set; }
+        private static int UltimoId { get; set; } = 1;
+        public string NombreCompleto { get; set; }
+        public string NumeroCamiseta { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public string Altura { get; set; }
+        public double Altura { get; set; }
         public string PeHabil { get; set; }
         public double ValorMercado { get; set; }
-        public string Puesto { get; set; }
         public Pais Pais { get; set; }
+        public TipoPuesto Puesto { get; set; }
 
-        public Jugador(string nombre, string apellido, string numCamiseta, DateTime fechaNacimiento, string altura, string peHabil, double valorMercado, string puesto, Pais pais)
+        public string Categoria { get; set; }
+        public double MontoReferencia { get; set; } = 200000;
+
+        public Jugador(string nombreCompleto, string numeroCamiseta, DateTime fechaNacimiento, double altura, string peHabil, double valorMercado, Pais pais, TipoPuesto puesto, string categoria)
         {
             Id = UltimoId++;
-            Nombre = nombre;
-            Apellido = apellido;
-            NumCamiseta = numCamiseta;
+            NombreCompleto = nombreCompleto;
+            NumeroCamiseta = numeroCamiseta;
             FechaNacimiento = fechaNacimiento;
             Altura = altura;
             PeHabil = peHabil;
             ValorMercado = valorMercado;
-            Puesto = puesto;
             Pais = pais;
+            Puesto = puesto;
+            Categoria = categoria;
         }
     }
 }

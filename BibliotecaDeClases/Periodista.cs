@@ -4,8 +4,8 @@ namespace BibliotecaDeClases
 {
     public class Periodista
     {
-        private static int UltimoId { get; set; } = 1;
         public int Id { get; }
+        private static int UltimoId { get; set; } = 1;
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }

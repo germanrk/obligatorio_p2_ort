@@ -3,12 +3,12 @@ namespace BibliotecaDeClases
 {
     public class Pais
     {
-        private static int UltimoId { get; set; } = 1;
         public int Id { get; }
+        private static int UltimoId { get; set; } = 1;
         public string Nombre { get; set; }
-        public string Codigo { get; set; }
+        public TipoCodigo Codigo { get; set; }
 
-        public Pais(string nombre, string codigo)
+        public Pais(string nombre, TipoCodigo codigo)
         {
             Id = UltimoId++;
             Nombre = nombre;
